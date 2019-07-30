@@ -1,0 +1,18 @@
+* Inicia npm project dependency
+	npm init --yes
+	
+* Instalação do Express
+	npm install -s express
+	
+* Instalação do Sequelize ORM de banco de dados + Modulo Mysql
+	npm install --save sequelize
+	
+		- Modulos
+			npm install --save mysql2
+			npm install --save mariadb
+			
+* Instalação do Handlebars, ferramente de auxilio a criação de páginas html(template)
+	npm install --save express-handlebars
+	
+* Instalação do body-parser, utilitário que auxilia o recebimento de dados de formulário.
+	npm install --save body-parser
