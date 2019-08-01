@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('cadastro', 'root', 'password', {
+
+/* Conexão com o banco de dados */
+const sequelize = new Sequelize('postapp', 'root', 'password', {
   host: 'localhost',
   dialect: 'mysql'
 })
@@ -10,7 +12,13 @@ sequelize.authenticate().then(function(){
   console.log('Falha ao se conectar: ' + erro);
 })
 
-/* Tabela de Modelo no banco de dados */
+/* Exportação dos modulos */
+module.exports = {
+  Sequelize: Sequelize,
+  sequelize: sequelize
+}
+
+/* Tabela de Modelo no banco de dados
 const Postagem = sequelize.define('postagens', {
   titulo: {
     type: Sequelize.STRING
@@ -19,6 +27,7 @@ const Postagem = sequelize.define('postagens', {
     type: Sequelize.TEXT
   }
 })
+*/
 
 /* Exemplo de insert na tabela Postagem
 Postagem.create({
@@ -26,6 +35,8 @@ Postagem.create({
   conteudo: 'Teste de insert'
 })
 */
+
+/* Tabela de Modelo no banco de dados
 const Usuario = sequelize.define('usuarios', {
   nome: {
     type: Sequelize.STRING
@@ -40,6 +51,7 @@ const Usuario = sequelize.define('usuarios', {
     type: Sequelize.STRING
   }
 })
+*/
 
 /* Exemplo de insert na tabela Usuario
 Usuario.create({

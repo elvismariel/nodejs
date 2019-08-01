@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
-const Sequelize = require('sequelize');
-
+const Post = require('./models/Post')
 
 // Config
   // Template Engine
@@ -14,24 +13,42 @@ const Sequelize = require('sequelize');
     app.use(bodyParser.urlencoded({extended: false}))
     app.use(bodyParser.json())
 
-  // Conexão com o banco de dados
-  const sequelize = new Sequelize('cadastro', 'root', 'password', {
-    host: 'localhost',
-    dialect: 'mysql'
+// Rotas
+  /* Pagina home */
+  app.get('/', (req, res) => {
+    Post.findAll({order: [['id', 'DESC']]}).then((posts) => {
+      res.render('home', {posts: posts})
+      //res.render('home', {nome: 'victor', conteudo: 'teste de conteudo'})
+    })
   })
 
-// Rotas
+  /* Pagina de Formulário de cadastro */
   app.get('/cad', (req, res) => {
     res.render('formulario')
     //res.send('Rota de cadastro de posts')
   })
 
+  /* Recebe os dados do formulário e cadastra no banco de dados */
   app.post('/add', (req, res) => {
-    req.body.conteudo
-
-    res.send('Formulario recebido: ' + req.body.conteudo)
+    Post.create({
+      titulo: req.body.titulo,
+      conteudo: req.body.conteudo
+    }).then(() => {
+      console.log('Post criado com sucesso!')
+      res.redirect('/')
+    }).catch(() => {
+      res.send('Houve um erro: ' + erro)
+    })
   })
 
+  /* Remove postagem */
+  app.get('/del/:id', (req, res) => {
+    Post.destroy({where: {'id': req.params.id}}).then(() => {
+      res.send('Postagem deletada com sucesso')
+    }).catch((erro) => {
+      res.send('Postagem não existe!')
+    })
+  })
 
 
 
