@@ -4,7 +4,7 @@
 * Instalação do Express
 	npm install -s express
 	
-* Instalação do Sequelize ORM de banco de dados + Modulo Mysql
+* Instalação do Sequelize, ORM que mapeia o banco de dados + Modulo Mysql
 	npm install --save sequelize
 	
 		- Modulos
@@ -16,3 +16,12 @@
 	
 * Instalação do body-parser, utilitário que auxilia o recebimento de dados de formulário.
 	npm install --save body-parser
+	
+* Instalação do Mongoose, ODM que mapeia os documentos do Mongo
+	npm install --save mongoose
+	
+* Instalação do Express Session para trabalhar com sessão na aplicação
+	npm install --save express-session
+	
+* Instalação do Connect Flash
+	npm install --save connect-flash
