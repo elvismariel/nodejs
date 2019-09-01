@@ -25,3 +25,10 @@
 	
 * Instalação do Connect Flash
 	npm install --save connect-flash
+	
+* Instalação do bcryptjs, biblioteca para encriptar senha/dados
+	npm install --save bcryptjs
+	
+* Instalação do passport, biblioteca de autentificacao diversos tipos (linkedin, facebook...)
+	npm install --save passport
+	npm install --save passport-local (estrategia escolhida para login local)
