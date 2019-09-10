@@ -19,6 +19,9 @@
 	
 * Instalação do Mongoose, ODM que mapeia os documentos do Mongo
 	npm install --save mongoose
+
+* Instalação do Mongoose-paginate, paginação nos documentos do Mongo.
+    npm install mongoose-paginate
 	
 * Instalação do Express Session para trabalhar com sessão na aplicação
 	npm install --save express-session
@@ -32,3 +35,9 @@
 * Instalação do passport, biblioteca de autentificacao diversos tipos (linkedin, facebook...)
 	npm install --save passport
 	npm install --save passport-local (estrategia escolhida para login local)
+
+* Instalação do plugin para gerenciar os diretorios
+    npm install require-dir
+
+* Instalação do plugin cors para liberar o acesso de outros dominios, nao somente do localhost
+    npm install cors
