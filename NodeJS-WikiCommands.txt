@@ -41,3 +41,15 @@
 
 * Instalação do plugin cors para liberar o acesso de outros dominios, nao somente do localhost
     npm install cors
+
+* Instalação do create-react-app
+    npm install -g create-react-app
+
+-------------------------- Erros --------------------------
+* npm ERR! code ELIFECYCLE
+    Resolver:
+        - Step 1: $ npm cache clean --force
+        - Step 2: Delete node_modules by $ rm -rf node_modules
+        - Step 3: npm install
+
+
