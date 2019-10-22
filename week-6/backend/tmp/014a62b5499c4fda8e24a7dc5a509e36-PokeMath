@@ -1,0 +1,15 @@
+
+* PokeMath - Plataforma que visa ensinar matematica para criancas de uma maneira divertida com pokemons.
+
+    - Fase 1:
+        - App (React Native Android): 
+            - Menubar para esconha da operacao matematica(Adicao/Subtracao)
+            - Apos a selecao de operacao matematica sera exibida uma tela com tres campos de entrada, valor1, valor2 e total.
+            - Ao entrar com o valor1 ou valor2, sera exibido a quantidade correspondentes de pokemons
+            - A crianca deve clicar sobre os pokemons para iniciar a contagem, terminando de contar deve-se informar no campo total.
+            - Caso o total esteja correto sera exibido uma imagem de parabens e caso contrario uma imagem de tente novamente.(O pokemon evolui)
+
+- Fase 2:
+        api - Retorna lista de pokemons (NodeJs, MongoDb)
+               - id, nome, url
+

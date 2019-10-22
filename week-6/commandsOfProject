@@ -1,0 +1,11 @@
+* Comando utilizado para iniciar um projeto, sera criado o arquivo package.json que gerencia as dependencias.
+    yarn init -y
+
+* E um micro-framework/middleware para gerenciar as rotas de entrada do sistema
+    yarn add express
+
+* Servico para gerencia modificacoes no projeto e atualizar os dados em tempo de real
+    yarn add nodemon -D
+
+* E uma ferramente de abstracao do banco de dados Mongo
+    yarn add mongoose

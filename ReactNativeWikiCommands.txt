@@ -1,5 +1,0 @@
-* Inicia um projeto react-native no divice/celular deve ser executado uma vez ao criar o projeto
-    react-native run-android
-
-* Inicia o projeto, deve ser executado dentro da pasta do projeto depois que ja foi executado o comando "run-android"
-    react-native start
